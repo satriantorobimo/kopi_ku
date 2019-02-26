@@ -1,0 +1,9 @@
+primary clor = 66bb6a
+secondary color = ff9800
+third color = d32f2f
+
+green border = 69f0ae
+
+content green = #81c784
+content red = #ef5350
+content orange = #ffb74d
