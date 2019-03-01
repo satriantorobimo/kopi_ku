@@ -166,6 +166,24 @@ class _TransactionState extends State<TransactionPage> {
           ),
         ),
       ),
+      persistentFooterButtons: <Widget>[
+        new Container(
+          child: Text("Total : Rp. 70.000.00 ", style: TextStyle(color: Colors.white,fontSize: 18.0)),
+        ),
+        SizedBox(height: 15.0),
+        new Container(
+          width: 100.0,
+          child: new RaisedButton(
+            child: const Text('Pay',style: TextStyle(color: Colors.white)),
+            color: const Color(0xFFff9800),
+            elevation: 4.0,
+            splashColor: Colors.blueGrey,
+            onPressed: () {
+              // Perform some action
+            },
+          ),
+        )
+      ],
     );
   }
 }

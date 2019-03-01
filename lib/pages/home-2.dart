@@ -69,14 +69,26 @@ class _Home2State extends State<Home2Page> {
         child: new Container(
           child: Column(
               children: [
-                SizedBox(height: 25.0),
+                SizedBox(height: 15.0),
                 firstContent(),
                 SizedBox(height: 15.0),
-                secondContent()
+                secondContent(),
+                secondContent(),
+                secondContent(),
+                secondContent(),
               ]
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+        heroTag: "AddData",
+        backgroundColor: const Color(0xFFff9800),
+        mini: true,
+        elevation: 10.0,
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked
     );
   }
 }

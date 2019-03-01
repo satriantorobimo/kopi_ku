@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kopi_ku/pages/home.dart';
 
 class LoginSignUpPage extends StatefulWidget {
 
@@ -16,7 +17,17 @@ class _LoginSignUpPageState extends State<LoginSignUpPage>{
     setState(() {
       _isLoading = true;
     });
-    _isLoading = false;
+    Future.delayed(const Duration(milliseconds: 500), () {
+      _isLoading = false;
+      setState(() {
+        // Here you can write your code for open new view
+        Navigator.of(context).push(
+            new MaterialPageRoute(
+                builder: (context) => new HomePage()
+            )
+        );
+      });
+    });
   }
 
   Widget login(){
@@ -25,7 +36,7 @@ class _LoginSignUpPageState extends State<LoginSignUpPage>{
           padding: EdgeInsets.all(20.0),
           child: new Column(
             children: <Widget>[
-              SizedBox(height: 85.0),
+              SizedBox(height: 55.0),
               new Container(
                   width: 190.0,
                   height: 190.0,
@@ -66,7 +77,7 @@ class _LoginSignUpPageState extends State<LoginSignUpPage>{
                 obscureText: true,
               ),
               //spacer
-              SizedBox(height: 35.0),
+              SizedBox(height: 25.0),
               //button login
               _isLoading == true ? const LinearProgressIndicator(backgroundColor: Color(0xFFFE3562)) : new ConstrainedBox(
                 constraints: const BoxConstraints(minWidth: double.infinity,minHeight: 55.0),

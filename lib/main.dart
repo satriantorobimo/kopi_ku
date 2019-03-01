@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           )
         ),
 
-        home: new HomePage()
+        home: new LoginSignUpPage()
     );
   }
 }
